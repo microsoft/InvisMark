@@ -1,33 +1,36 @@
-# Project
+# (WACV2025) InvisMark: Invisible and Robust Watermarking for AI-generated Image Provenance
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repo contains source code used for the paper: https://arxiv.org/pdf/2411.07795
 
-As the maintainer of this project, please make a few updates:
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Environment Requirement
 
-## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+```
+pip install -r requirements.txt
+```
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## Main Script
 
-## Trademarks
+- Leverage the pretrained model ckpt
+    - Download the pretrained model weights (with 100 encoded bits and no ECC included) from: https://1drv.ms/f/c/7882afab383c8474/Ei_Lasu5CrpHsrNIkYRLenYBmx662VSAovq5hD8r-NsB5A?e=gbHNVX
+    - Follow the instruction in `Demo.ipynb`
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+- Train a watermark model from scratch with your own dataset
+    - Prepare your own image dataset
+    - Update `train_path` and `eval_path` in `train.sh`
+    - ```./train.sh```
+
+
+## Citation
+
+If you find this paper or code useful, please cite by:
+```txt
+@article{xu2024invismark,
+  title={InvisMark: Invisible and Robust Watermarking for AI-generated Image Provenance},
+  author={Xu, Rui and Hu, Mengya and Lei, Deren and Li, Yaxi and Lowe, David and Gorevski, Alex and Wang, Mingyu and Ching, Emily and Deng, Alex and others},
+  journal={arXiv preprint arXiv:2411.07795},
+  year={2024}
+}
+```

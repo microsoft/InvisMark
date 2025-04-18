@@ -22,6 +22,6 @@ pillow==10.4.0
 scipy==1.14.1
 six==1.16.0
 tensorboard==2.17.1
-torch==2.4.1
+torch==2.6.0
 torchmetrics==1.4.1
 torchvision==0.19.1

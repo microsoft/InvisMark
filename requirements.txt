@@ -18,7 +18,7 @@ nvidia-cusparse-cu12==12.1.0.106
 nvidia-nccl-cu12==2.20.5
 nvidia-nvjitlink-cu12==12.6.68
 nvidia-nvtx-cu12==12.1.105
-pillow==10.4.0
+pillow==12.1.1
 scipy==1.14.1
 six==1.16.0
 tensorboard==2.17.1
